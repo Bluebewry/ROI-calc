@@ -33,14 +33,20 @@ class ROICalculator:
         cash =  self.user_ri - self.user_expenses
         print(f"Your cash flow is: {cash}")
 
+    # Throwing some code in here as an example for further functionality- it's not complete by any means but intended to give you some direction.
     def run(self):
-        question = input("Need to use the ROI calculator? ('yes' or 'no'): ")
-        if question.lower() == "yes":
-            self.income()
-            self.expenses()
-            self.cash_flow()
-        elif question.lower() == "no":
-            print("Okay goodbye")
+        question = input("hit enter to start new roi calc (enter 'q' to quit): ")
+        while question != 'q':
+            x = input('enter "i" for income, "e" for expenses, "c" to calculate')
+            if x.lower() == "i":
+                self.income()
+            elif x.lower() == 'e':
+                self.expenses()
+
+            #just an example of structure above.
+                self.cash_flow()
+            elif question.lower() == "no":
+                print("Okay goodbye")
         
 
 b = ROICalculator()
